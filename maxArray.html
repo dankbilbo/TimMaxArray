@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất mảng</title>
+</head>
+<body>
+<input id="enternum" type="number">
+<button onclick="addElement()" id="add">Add</button>
+<button onclick="findMax()" id="findmax">Max</button>
+<p id="1"></p>
+<script>
+    let arr = new Array();
+    function addElement(){
+        arr.push(document.getElementById("enternum").value);
+    }
+    function findMax(){
+        let max = arr[0];
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        console.log(max);
+        document.getElementById("1").innerHTML = max;
+    }
+
+</script>
+</body>
+</html>
